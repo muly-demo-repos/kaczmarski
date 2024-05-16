@@ -28,6 +28,7 @@ import { UpdateCustomerArgs } from "./UpdateCustomerArgs";
 import { DeleteCustomerArgs } from "./DeleteCustomerArgs";
 import { OrderFindManyArgs } from "../../order/base/OrderFindManyArgs";
 import { Order } from "../../order/base/Order";
+import { CustomerComputeArgs } from "../CustomerComputeArgs";
 import { CustomerService } from "../customer.service";
 @common.UseGuards(GqlDefaultAuthGuard, gqlACGuard.GqlACGuard)
 @graphql.Resolver(() => Customer)
@@ -162,5 +163,13 @@ export class CustomerResolverBase {
     }
 
     return results;
+  }
+
+  @graphql.Query(() => Number)
+  async CalculateCustomer(
+    @graphql.Args()
+    args: CustomerComputeArgs
+  ): Promise<number> {
+    return this.service.CalculateCustomer(args);
   }
 }
