@@ -172,4 +172,12 @@ export class CustomerResolverBase {
   ): Promise<number> {
     return this.service.CalculateCustomer(args);
   }
+
+  @graphql.Query(() => String)
+  async DemoAction(
+    @graphql.Args()
+    args: string
+  ): Promise<string> {
+    return this.service.DemoAction(args);
+  }
 }

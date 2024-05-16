@@ -63,4 +63,7 @@ export class CustomerServiceBase {
   async CalculateCustomer(args: CustomerComputeArgs): Promise<number> {
     throw new Error("Not implemented");
   }
+  async DemoAction(args: string): Promise<string> {
+    throw new Error("Not implemented");
+  }
 }
