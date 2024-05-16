@@ -29,7 +29,6 @@ import { CustomerUpdateInput } from "./CustomerUpdateInput";
 import { OrderFindManyArgs } from "../../order/base/OrderFindManyArgs";
 import { Order } from "../../order/base/Order";
 import { OrderWhereUniqueInput } from "../../order/base/OrderWhereUniqueInput";
-import { CustomerComputeArgs } from "../CustomerComputeArgs";
 
 @swagger.ApiBearerAuth()
 @common.UseGuards(defaultAuthGuard.DefaultAuthGuard, nestAccessControl.ACGuard)
@@ -315,8 +314,25 @@ export class CustomerControllerBase {
   })
   async CalculateCustomer(
     @common.Body()
-    body: CustomerComputeArgs
+    body: string
   ): Promise<number> {
     return this.service.CalculateCustomer(body);
+  }
+
+  @common.Get("/:id/demo-action")
+  @swagger.ApiOkResponse({
+    type: String,
+  })
+  @swagger.ApiNotFoundResponse({
+    type: errors.NotFoundException,
+  })
+  @swagger.ApiForbiddenResponse({
+    type: errors.ForbiddenException,
+  })
+  async DemoAction(
+    @common.Body()
+    body: string
+  ): Promise<string> {
+    return this.service.DemoAction(body);
   }
 }
