@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+                 package item;
+service ItemService {
+ rpc createItem (ItemCreateInput) returns (Item) {}
+rpc items (findManyParams) returns (stream Item) {}
+rpc item (ItemWhereUniqueInput) returns (Item) {}
+rpc updateItem (ItemUpdateInput) returns (Item) {}
+rpc deleteItem (ItemWhereUniqueInput) returns (Item) {}
+rpc findManyItems (ItemWhereUniqueInput) returns (stream Order) {}
+rpc updateItems (OrderParams) returns (stream Order) {}
+rpc connectItems (OrderParams) returns (Order) {}
+rpc disconnectItems (OrderParams) returns (Order) {} 
+ }
+message ItemCreateInput {
+string createdAt = 1;
+string description = 2;
+string id = 3;
+repeated Order orders = 4;
+int32 price = 5;
+string sku = 6;
+string updatedAt = 7;
+};
+message Item {
+string createdAt = 1;
+string description = 2;
+string id = 3;
+repeated Order orders = 4;
+int32 price = 5;
+string sku = 6;
+string updatedAt = 7;
+};
+message ItemWhereUniqueInput {
+string createdAt = 1;
+string description = 2;
+string id = 3;
+repeated Order orders = 4;
+int32 price = 5;
+string sku = 6;
+string updatedAt = 7;
+};
+message ItemUpdateInput {
+string createdAt = 1;
+string description = 2;
+string id = 3;
+repeated Order orders = 4;
+int32 price = 5;
+string sku = 6;
+string updatedAt = 7;
+};
+message findManyParams {
+
+};
+message Order {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message OrderWhereUniqueInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message OrderParams {
+ItemWhereUniqueInput itemWhereUniqueInput = 1;
+OrderWhereUniqueInput orderWhereUniqueInput = 2;
+};

@@ -1,8 +1,32 @@
 [
   {
+    "role": "admin",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
     "role": "user",
     "resource": "User",
     "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
+    "resource": "User",
+    "action": "create:any",
     "attributes": "*"
   },
   {
@@ -12,7 +36,13 @@
     "attributes": "*"
   },
   {
-    "role": "user",
+    "role": "admin",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
     "resource": "User",
     "action": "update:any",
     "attributes": "*"
@@ -20,7 +50,37 @@
   {
     "role": "user",
     "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
     "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
+    "resource": "User",
+    "action": "read:any",
     "attributes": "*"
   },
   {
@@ -30,9 +90,33 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "Order",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
+    "resource": "Order",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
     "role": "user",
     "resource": "Order",
     "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
+    "resource": "Order",
+    "action": "create:any",
     "attributes": "*"
   },
   {
@@ -42,7 +126,13 @@
     "attributes": "*"
   },
   {
-    "role": "user",
+    "role": "admin",
+    "resource": "Order",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
     "resource": "Order",
     "action": "update:any",
     "attributes": "*"
@@ -50,7 +140,37 @@
   {
     "role": "user",
     "resource": "Order",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
     "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
+    "resource": "Order",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Order",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
+    "resource": "Order",
+    "action": "read:any",
     "attributes": "*"
   },
   {
@@ -60,9 +180,33 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "Customer",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
+    "resource": "Customer",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
     "role": "user",
     "resource": "Customer",
     "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Customer",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
+    "resource": "Customer",
+    "action": "create:any",
     "attributes": "*"
   },
   {
@@ -72,7 +216,13 @@
     "attributes": "*"
   },
   {
-    "role": "user",
+    "role": "admin",
+    "resource": "Customer",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
     "resource": "Customer",
     "action": "update:any",
     "attributes": "*"
@@ -80,7 +230,37 @@
   {
     "role": "user",
     "resource": "Customer",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Customer",
     "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
+    "resource": "Customer",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Customer",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Customer",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
+    "resource": "Customer",
+    "action": "read:any",
     "attributes": "*"
   },
   {
@@ -90,7 +270,13 @@
     "attributes": "*"
   },
   {
-    "role": "user",
+    "role": "admin",
+    "resource": "Item",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
     "resource": "Item",
     "action": "read:own",
     "attributes": "*"
@@ -98,7 +284,31 @@
   {
     "role": "user",
     "resource": "Item",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
+    "resource": "Item",
     "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Item",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Item",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
+    "resource": "Item",
+    "action": "update:any",
     "attributes": "*"
   },
   {
@@ -108,9 +318,33 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "Item",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
+    "resource": "Item",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
     "role": "user",
     "resource": "Item",
     "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Item",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "storeManager",
+    "resource": "Item",
+    "action": "read:any",
     "attributes": "*"
   },
   {
