@@ -44,6 +44,7 @@ model Item {
   id          String   @id @default(cuid())
   orders      Order[]
   price       Float?
+  quantity    Int?
   sku         String?
   updatedAt   DateTime @updatedAt
 }

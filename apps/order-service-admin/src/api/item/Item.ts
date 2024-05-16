@@ -6,6 +6,7 @@ export type Item = {
   id: string;
   orders?: Array<Order>;
   price: number | null;
+  quantity: number | null;
   sku: string | null;
   updatedAt: Date;
 };

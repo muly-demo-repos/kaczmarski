@@ -17,6 +17,7 @@ import {
   IsOptional,
   ValidateNested,
   IsNumber,
+  IsInt,
 } from "class-validator";
 import { Type } from "class-transformer";
 import { Order } from "../../order/base/Order";
@@ -69,6 +70,17 @@ class Item {
     nullable: true,
   })
   price!: number | null;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsInt()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  quantity!: number | null;
 
   @ApiProperty({
     required: false,
