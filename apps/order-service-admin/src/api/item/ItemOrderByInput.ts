@@ -5,6 +5,7 @@ export type ItemOrderByInput = {
   description?: SortOrder;
   id?: SortOrder;
   price?: SortOrder;
+  quantity?: SortOrder;
   sku?: SortOrder;
   updatedAt?: SortOrder;
 };

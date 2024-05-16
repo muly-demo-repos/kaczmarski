@@ -16,6 +16,7 @@ import {
   IsOptional,
   ValidateNested,
   IsNumber,
+  IsInt,
 } from "class-validator";
 import { OrderUpdateManyWithoutItemsInput } from "./OrderUpdateManyWithoutItemsInput";
 import { Type } from "class-transformer";
@@ -55,6 +56,17 @@ class ItemUpdateInput {
     nullable: true,
   })
   price?: number | null;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsInt()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  quantity?: number | null;
 
   @ApiProperty({
     required: false,

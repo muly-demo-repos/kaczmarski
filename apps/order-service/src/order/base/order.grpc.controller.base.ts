@@ -203,6 +203,7 @@ export class OrderGrpcControllerBase {
         description: true,
         id: true,
         price: true,
+        quantity: true,
         sku: true,
         updatedAt: true,
       },

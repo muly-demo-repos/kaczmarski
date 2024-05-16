@@ -18,8 +18,9 @@ string description = 2;
 string id = 3;
 repeated Order orders = 4;
 int32 price = 5;
-string sku = 6;
-string updatedAt = 7;
+int32 quantity = 6;
+string sku = 7;
+string updatedAt = 8;
 };
 message Item {
 string createdAt = 1;
@@ -27,8 +28,9 @@ string description = 2;
 string id = 3;
 repeated Order orders = 4;
 int32 price = 5;
-string sku = 6;
-string updatedAt = 7;
+int32 quantity = 6;
+string sku = 7;
+string updatedAt = 8;
 };
 message ItemWhereUniqueInput {
 string createdAt = 1;
@@ -36,8 +38,9 @@ string description = 2;
 string id = 3;
 repeated Order orders = 4;
 int32 price = 5;
-string sku = 6;
-string updatedAt = 7;
+int32 quantity = 6;
+string sku = 7;
+string updatedAt = 8;
 };
 message ItemUpdateInput {
 string createdAt = 1;
@@ -45,8 +48,9 @@ string description = 2;
 string id = 3;
 repeated Order orders = 4;
 int32 price = 5;
-string sku = 6;
-string updatedAt = 7;
+int32 quantity = 6;
+string sku = 7;
+string updatedAt = 8;
 };
 message findManyParams {
 
