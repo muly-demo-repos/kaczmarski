@@ -13,6 +13,7 @@ import * as graphql from "@nestjs/graphql";
 import { GraphQLError } from "graphql";
 import { isRecordNotFoundError } from "../../prisma.util";
 import { MetaQueryPayload } from "../../util/MetaQueryPayload";
+import { Public } from "../../decorators/public.decorator";
 import { Order } from "./Order";
 import { OrderCountArgs } from "./OrderCountArgs";
 import { OrderFindManyArgs } from "./OrderFindManyArgs";
@@ -95,6 +96,7 @@ export class OrderResolverBase {
     }
   }
 
+  @Public()
   @graphql.ResolveField(() => [Customer], { name: "customers" })
   async findCustomers(
     @graphql.Parent() parent: Order,

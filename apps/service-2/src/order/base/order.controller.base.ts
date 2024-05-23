@@ -17,6 +17,7 @@ import { Request } from "express";
 import { plainToClass } from "class-transformer";
 import { ApiNestedQuery } from "../../decorators/api-nested-query.decorator";
 import { OrderService } from "../order.service";
+import { Public } from "../../decorators/public.decorator";
 import { OrderCreateInput } from "./OrderCreateInput";
 import { Order } from "./Order";
 import { OrderFindManyArgs } from "./OrderFindManyArgs";
@@ -145,6 +146,7 @@ export class OrderControllerBase {
     }
   }
 
+  @Public()
   @common.Get("/:id/customers")
   @ApiNestedQuery(CustomerFindManyArgs)
   async findCustomers(

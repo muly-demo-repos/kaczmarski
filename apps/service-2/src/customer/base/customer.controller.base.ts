@@ -17,6 +17,7 @@ import { Request } from "express";
 import { plainToClass } from "class-transformer";
 import { ApiNestedQuery } from "../../decorators/api-nested-query.decorator";
 import { CustomerService } from "../customer.service";
+import { Public } from "../../decorators/public.decorator";
 import { CustomerCreateInput } from "./CustomerCreateInput";
 import { Customer } from "./Customer";
 import { CustomerFindManyArgs } from "./CustomerFindManyArgs";
@@ -60,6 +61,7 @@ export class CustomerControllerBase {
     });
   }
 
+  @Public()
   @common.Get()
   @swagger.ApiOkResponse({ type: [Customer] })
   @ApiNestedQuery(CustomerFindManyArgs)
