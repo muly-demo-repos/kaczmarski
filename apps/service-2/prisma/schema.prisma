@@ -6,3 +6,26 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
+
+model Customer {
+  address     String?
+  createdAt   DateTime  @default(now())
+  dateOfBirth DateTime?
+  email       String?
+  id          String    @id @default(cuid())
+  name        String?
+  order       Order?    @relation(fields: [orderId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  orderId     String?
+  phoneNumber String?
+  updatedAt   DateTime  @updatedAt
+}
+
+model Order {
+  createdAt   DateTime   @default(now())
+  customers   Customer[]
+  id          String     @id @default(cuid())
+  orderDate   DateTime?
+  status      String?
+  totalAmount Float?
+  updatedAt   DateTime   @updatedAt
+}
